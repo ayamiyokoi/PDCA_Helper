@@ -57,7 +57,7 @@ class ReflectionsController < ApplicationController
   end
 
   def topics
-    @reflections = Reflection.all
+    @reflection = Reflection.all
   end
 
   private
