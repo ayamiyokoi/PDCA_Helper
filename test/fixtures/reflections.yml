@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  goal: MyString
+  result: MyString
+  biggergoal: MyString
+  plan: MyText
+  topic: MyText
+  overall: MyText
+
+two:
+  goal: MyString
+  result: MyString
+  biggergoal: MyString
+  plan: MyText
+  topic: MyText
+  overall: MyText

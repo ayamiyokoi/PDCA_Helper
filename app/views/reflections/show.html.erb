@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Goal:</strong>
+  <%= @rflection.goal %>
+</p>
+
+<p>
+  <strong>Result:</strong>
+  <%= @rflection.result %>
+</p>
+
+<p>
+  <strong>Biggergoal:</strong>
+  <%= @rflection.biggergoal %>
+</p>
+
+<p>
+  <strong>Plan:</strong>
+  <%= @rflection.plan %>
+</p>
+
+<p>
+  <strong>Topic:</strong>
+  <%= @rflection.topic %>
+</p>
+
+<p>
+  <strong>Overall:</strong>
+  <%= @rflection.overall %>
+</p>
+
+<%= link_to 'Edit', edit_rflection_path(@rflection) %> |
+<%= link_to 'Back', rflections_path %>

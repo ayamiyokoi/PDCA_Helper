@@ -1,0 +1,47 @@
+<%= form_with(model: rflection, local: true) do |form| %>
+  <% if rflection.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(rflection.errors.count, "error") %> prohibited this rflection from being saved:</h2>
+
+      <ul>
+      <% rflection.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :goal %>
+    <%= form.text_field :goal %>
+  </div>
+
+  <div class="field">
+    <%= form.label :result %>
+    <%= form.text_field :result %>
+  </div>
+
+  <div class="field">
+    <%= form.label :biggergoal %>
+    <%= form.text_field :biggergoal %>
+  </div>
+
+  <div class="field">
+    <%= form.label :plan %>
+    <%= form.text_area :plan %>
+  </div>
+
+  <div class="field">
+    <%= form.label :topic %>
+    <%= form.text_area :topic %>
+  </div>
+
+  <div class="field">
+    <%= form.label :overall %>
+    <%= form.text_area :overall %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
