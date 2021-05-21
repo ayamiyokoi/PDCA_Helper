@@ -1,10 +1,10 @@
-<%= form_with(model: rflection, local: true) do |form| %>
-  <% if rflection.errors.any? %>
+<%= form_with(model: reflection, local: true) do |form| %>
+  <% if reflection.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(rflection.errors.count, "error") %> prohibited this rflection from being saved:</h2>
+      <h2><%= pluralize(reflection.errors.count, "error") %> prohibited this reflection from being saved:</h2>
 
       <ul>
-      <% rflection.errors.full_messages.each do |message| %>
+      <% reflection.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>

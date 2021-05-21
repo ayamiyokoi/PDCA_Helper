@@ -1,1 +1,1 @@
-json.array! @rflections, partial: "rflections/rflection", as: :rflection
+json.array! @reflections, partial: "reflections/reflection", as: :reflection

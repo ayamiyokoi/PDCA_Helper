@@ -1,1 +1,1 @@
-json.partial! "rflections/rflection", rflection: @rflection
+json.partial! "reflections/rflection", reflection: @reflection
