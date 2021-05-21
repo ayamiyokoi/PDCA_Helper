@@ -1,13 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Rflections</h1>
+<h1>Reflections</h1>
 
 <table>
   <thead>
     <tr>
       <th>Goal</th>
       <th>Result</th>
-      <th>Biggergoal</th>
+      <th>Bigger goal</th>
       <th>Plan</th>
       <th>Topic</th>
       <th>Overall</th>
@@ -16,17 +16,17 @@
   </thead>
 
   <tbody>
-    <% @rflections.each do |rflection| %>
+    <% @reflections.each do |reflection| %>
       <tr>
-        <td><%= rflection.goal %></td>
-        <td><%= rflection.result %></td>
-        <td><%= rflection.biggergoal %></td>
-        <td><%= rflection.plan %></td>
-        <td><%= rflection.topic %></td>
-        <td><%= rflection.overall %></td>
-        <td><%= link_to 'Show', rflection %></td>
-        <td><%= link_to 'Edit', edit_rflection_path(rflection) %></td>
-        <td><%= link_to 'Destroy', rflection, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= reflection.goal %></td>
+        <td><%= reflection.result %></td>
+        <td><%= reflection.biggergoal %></td>
+        <td><%= reflection.plan %></td>
+        <td><%= reflection.topic %></td>
+        <td><%= reflection.overall %></td>
+        <td><%= link_to 'Show', reflection %></td>
+        <td><%= link_to 'Edit', edit_reflection_path(reflection) %></td>
+        <td><%= link_to 'Destroy', reflection, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +34,4 @@
 
 <br>
 
-<%= link_to 'New Rflection', new_rflection_path %>
+<%= link_to 'New Reflection', new_reflection_path %>

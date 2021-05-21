@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_21_000941) do
+ActiveRecord::Schema.define(version: 2021_05_21_042556) do
 
   create_table "reflections", force: :cascade do |t|
     t.string "goal"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2021_05_21_000941) do
     t.text "overall"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "user_id"
   end
 
   create_table "users", force: :cascade do |t|
