@@ -1,5 +1,6 @@
 class Reflection < ApplicationRecord
 
-  # belongs_to :user TODO 1:Nの関係にする
+  # belongs_to :user
+  belongs_to :user
 
 end

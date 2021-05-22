@@ -22,6 +22,8 @@ class ReflectionsController < ApplicationController
   # POST /rflections or /rflections.json
   def create
     @reflection = Reflection.new(reflection_params)
+    @reflection.user_id = current_user.id
+    @reflection.save
 
     respond_to do |format|
       if @reflection.save
