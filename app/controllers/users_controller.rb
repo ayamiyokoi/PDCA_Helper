@@ -20,7 +20,11 @@ class UsersController < ApplicationController
   private
 
   def user_params
+<<<<<<< HEAD
     params.require(:user).permit(:name, :image)
+=======
+    params.require(:user).permit(:name, :profile_image)
+>>>>>>> edit3
   end
 
 end

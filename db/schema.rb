@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2021_05_23_052012) do
+=======
+ActiveRecord::Schema.define(version: 2021_05_23_061722) do
+>>>>>>> edit3
 
   create_table "reflections", force: :cascade do |t|
     t.string "goal"
