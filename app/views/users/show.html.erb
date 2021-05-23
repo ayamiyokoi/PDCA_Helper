@@ -1,6 +1,7 @@
+      <p>image<br><%= attachment_image_tag @user, :profile_image, size: "50x50", format: 'jpeg', fallback: "no_image.jpg" %></p>
       <p>name<br><%= @user.name %></p>
       <p>email<br><%= @user.email %></p>
       <% if @user == current_user %>
-      <p><%= link_to 'Edit', edit_user_path(@user) %></p>
+      <p><%= link_to 'Edit', edit_user_registration_path(@user) %></p>
       <% end %>
       <%= link_to 'Back', users_path %>
