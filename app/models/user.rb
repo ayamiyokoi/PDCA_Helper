@@ -5,10 +5,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-<<<<<<< HEAD
-=======
-   attachment :profile_image
->>>>>>> edit3
-  mount_uploader :image, ImageUploader
+  attachment :profile_image
+  has_many :group_users
+  has_many :groups, through: :group_users
 
 end
