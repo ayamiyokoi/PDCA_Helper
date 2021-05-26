@@ -1,4 +1,4 @@
-#favorite{ id: @reflection.id }
+<div id="<%= @reflection.id %> favorite">
   <% if !Favorite.exists?(user: current_user, reflection_id: @reflection.id)  %>
     <%= link_to reflection_favorites_path(@reflection), method: :post, remote: true, class: "favorite-btn favorite-post" do %>
       <i class= "far fa-thumbs-up">
@@ -10,3 +10,4 @@
         <span> いいね！</span>
         <%= @reflection.favorites.length %><% end %>
   <% end %>
+</div>
