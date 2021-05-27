@@ -5,10 +5,13 @@
   自己紹介
 </div>
 <div class="col-md-4">
-  目標と達成率
+  <p>目標と達成率</p>
+  <%= @reflection.biggergoal %>
 </div>
 <div class="col-md-4">
-  今日の目標と結果
+  <p>今日の目標と結果</p>
+  <p>目標<br><%= @reflection.goal %></p>
+  <p>結果<br><%= @reflection.result %></p>
 </div>
 </div>
 
@@ -23,10 +26,12 @@
 
 <div class="row">
   <div class="col-md-6">
-    本日のトピック
+    <p>本日のトピック</p>
+    <%= @reflection.topic %>
   </div>
   <div class="col-md-6">
-    本日の総括
+    <p>本日の総括</p>
+    <%= @reflection.overall %>
   </div>
 </div>
 <h1>Reflections</h1>
@@ -53,8 +58,8 @@
         <td><%= reflection.result %></td>
         <td><%= reflection.biggergoal %></td>
         <td><%= reflection.plan %></td>
-        <td><%= reflection.topic %><br><%= link_to "#{reflection.post_comments.count} コメント", reflection_path(reflection.id) %></td>
-        <td><%= reflection.overall %></td>
+        <td><%= reflection.topic %></td>
+        <td><%= reflection.overall %><br><%= link_to "#{reflection.post_comments.count} コメント", reflection_path(reflection.id) %></td>
         <td><%= link_to 'Show', reflection %></td>
         <td><%= link_to 'Edit', edit_reflection_path(reflection) %></td>
         <td><%= link_to 'Destroy', reflection, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -7,6 +7,12 @@
             <div class="group__name">
               <%= group.name %>
             </div>
+            <div class="member">
+              メンバー:
+              <% group.users.each do |user| %>
+              <%= attachment_image_tag user, :profile_image, size: "50x50", format: 'jpeg', fallback: "no_image.jpg" %><%= user.name %>
+              <% end %>
+            </div>
             <div class="group__message">
               メッセージはまだありません。
             </div>

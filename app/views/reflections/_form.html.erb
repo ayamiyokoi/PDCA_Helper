@@ -1,3 +1,4 @@
+
 <%= form_with(model: reflection, local: true) do |form| %>
   <% if reflection.errors.any? %>
     <div id="error_explanation">
@@ -13,32 +14,32 @@
   <% @user %>
 
   <div class="field">
-    <%= form.label :goal %>
+    今日の目標<br>
     <%= form.text_field :goal %>
   </div>
 
   <div class="field">
-    <%= form.label :result %>
+    今日の成果<br>
     <%= form.text_field :result %>
   </div>
 
   <div class="field">
-    <%= form.label :biggergoal %>
+    定性的目標（今月の目標・今クオーターの目標）<br>
     <%= form.text_field :biggergoal %>
   </div>
 
   <div class="field">
-    <%= form.label :plan %>
+    予定<br>
     <%= form.text_area :plan %>
   </div>
 
   <div class="field">
-    <%= form.label :topic %>
+    本日のトピック<br>
     <%= form.text_area :topic %>
   </div>
 
   <div class="field">
-    <%= form.label :overall %>
+    本日の統括<br>
     <%= form.text_area :overall %>
   </div>
 
