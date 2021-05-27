@@ -15,7 +15,7 @@
     <% @reflections.each do |reflection| %>
       <tr>
         <td><%= reflection.topic %></td>
-        <td><%= link_to 'Show', reflection %></td>
+        <td><%= link_to 'Show', topic_path(reflection.id) %></td>
         <td><%= link_to 'Edit', edit_reflection_path(reflection) %></td>
         <td><%= link_to 'Destroy', reflection, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
