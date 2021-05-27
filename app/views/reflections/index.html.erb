@@ -39,7 +39,7 @@
 <table>
   <thead>
     <tr>
-      <th>name</th>
+      <th>user</th>
       <th>Goal</th>
       <th>Result</th>
       <th>Bigger goal</th>
@@ -53,7 +53,7 @@
   <tbody>
     <% @reflections.each do |reflection| %>
       <tr>
-        <td></td>
+        <td><%= attachment_image_tag reflection.user, :profile_image, size: "40x40", format: 'jpeg', fallback: "no_image.jpg" %><%= reflection.user.name %></td>
         <td><%= reflection.goal %></td>
         <td><%= reflection.result %></td>
         <td><%= reflection.biggergoal %></td>
