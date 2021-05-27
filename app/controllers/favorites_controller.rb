@@ -3,18 +3,21 @@ class FavoritesController < ApplicationController
   before_action :authenticate_user!
 
   def create
-    if @reflection.user_id != current_user.id
-      @favorite = Favorite.create(user_id: current_user.id, reflection_id: @reflection.id)
-    end
+    reflection = Reflection.find(params[:reflection_id])
+    favorite = current_user.favorites.new(reflection_id: reflection.id)
+    favorite.save
+    redirect_to reflection_path(reflection)
   end
 
   def destroy
-    @favorite = Favorite.find_by(user_id: current_user.id, reflection_id: @reflection.id)
-    @favorite.destroy
+    reflection = Reflection.find(params[:reflection_id])
+    favorite = current_user.favorites.new(reflection_id: reflection.id)
+    favorite.destroy
+    redirect_to reflection_path(reflection)
   end
 
   def index
-    
+
   end
 
   private

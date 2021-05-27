@@ -5,10 +5,13 @@ Rails.application.routes.draw do
     resources :post_comments, only: [:create, :destroy]
     resource :favorites, only: [:create, :destroy]
   end
+  
   root :to =>'reflections#top'
+  
   resources :users do
     get :favorites, on: :collection
   end
+  
   resources :groups, only: [:new, :create, :edit, :update, :index]
   resources :topics, only: [:index]
   resources :favorites, only: [:index]
