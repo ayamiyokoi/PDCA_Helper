@@ -19,7 +19,7 @@
         <td><%= link_to 'Edit', edit_reflection_path(reflection) %></td>
         <td><%= link_to 'Destroy', reflection, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
-      <%= render 'favorite', reflection: @reflection %>
+      <%= render 'favorite', reflection: reflection %>
     <% end %>
   </tbody>
 </table>

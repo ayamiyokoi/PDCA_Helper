@@ -10,5 +10,5 @@ class User < ApplicationRecord
   has_many :group_users
   has_many :groups, through: :group_users
   has_many :favorites, dependent: :destroy
-
+  has_many :post_comments, dependent: :destroy
 end

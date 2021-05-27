@@ -1,16 +1,25 @@
-<div class="groups">
-    <% current_user.groups.each do |group| %>
-      <div class="group">
-        <%= link_to '#' do %>
-          <div class="group__name">
-            <%= group.name %>
-          </div>
-          <div class="group__message">
-            メッセージはまだありません。
-          </div>
-        <% end %>
-        <%= link_to 'Edit', edit_group_path(group) %><br><%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %>
-      </div>
-    <% end %>
+<div class="container">
+  <div class="row">
+    <div class="groups col-md-12">
+      <% current_user.groups.each do |group| %>
+        <div class="group">
+          <%= link_to '#' do %>
+            <div class="group__name">
+              <%= group.name %>
+            </div>
+            <div class="group__message">
+              メッセージはまだありません。
+            </div>
+          <% end %>
+          <%= link_to 'Edit', edit_group_path(group) %><br><%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+      <% end %>
+    </div>
 
+  </div>
+<div class="row">
+  <div class="chat-group-form">
+  <h1>新規チャットグループ</h1>
+  <%= render :partial => 'form', :locals => {group: @group} %>
+  </div>
 </div>

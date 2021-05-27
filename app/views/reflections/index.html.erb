@@ -53,7 +53,7 @@
         <td><%= reflection.result %></td>
         <td><%= reflection.biggergoal %></td>
         <td><%= reflection.plan %></td>
-        <td><%= reflection.topic %></td>
+        <td><%= reflection.topic %><br><%= link_to "#{reflection.post_comments.count} コメント", reflection_path(reflection.id) %></td>
         <td><%= reflection.overall %></td>
         <td><%= link_to 'Show', reflection %></td>
         <td><%= link_to 'Edit', edit_reflection_path(reflection) %></td>
