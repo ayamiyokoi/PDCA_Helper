@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'topics/index'
   devise_for :users
   resources :reflections do
+    resources :post_comments, only: [:create, :destroy]
     resource :favorites, only: [:create, :destroy]
   end
   root :to =>'reflections#top'
