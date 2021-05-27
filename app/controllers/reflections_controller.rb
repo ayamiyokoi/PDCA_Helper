@@ -4,6 +4,7 @@ class ReflectionsController < ApplicationController
   # GET /rflections or /rflections.json
   def index
     @reflections = Reflection.all
+    @user = User.find(@reflection.user_id)
   end
 
   # GET /rflections/1 or /rflections/1.json
