@@ -11,9 +11,12 @@
 
   <body>
     <header>
-      <ul>
+      <div class="container">
+        <span class="navbar-brand"><%= link_to "PDCA Helper", "/",style: "color:white;" %></span>
+  
+      <ul class="navbar-nav ml-auto">
             <% if user_signed_in? %>
-              <li><%= link_to "本日の反省", new_reflection_path,style: "color:white;" %></li>
+              <li><%= link_to "本日の反省", new_reflection_path, style: "color:white;" %></li>
               <li><%= link_to "所属チーム", groups_path, style: "color:white;" %></li>
               <li><%= link_to "プレイヤー", users_path, style: "color:white;" %></li>
               <li><%= link_to "マイページ", reflections_path, style: "color:white;" %></li>
@@ -26,6 +29,7 @@
               <li><%= link_to "ログイン", new_user_session_path, style: "color:white;" %></li>
             <% end %>
       </ul>
+      </div>
     </header>
     <%= yield %>
   </body>
