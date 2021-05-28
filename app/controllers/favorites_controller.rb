@@ -1,5 +1,5 @@
 class FavoritesController < ApplicationController
-  before_action :set_post
+  before_action :set_post, except: [:index]
   before_action :authenticate_user!
 
   def create
@@ -16,8 +16,11 @@ class FavoritesController < ApplicationController
     redirect_to reflection_path(reflection)
   end
 
-  def index
-
+  def show
+      @user = User.find(params[:id])
+      @reflections = @user.reflections
+      favorites = Favorite.where(user_id: current_user.id).pluck(:reflection_id)
+      @favorite_list = Reflection.find(favorites)
   end
 
   private

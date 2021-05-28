@@ -13,12 +13,12 @@
     <header>
       <ul>
             <% if user_signed_in? %>
-              <li><%= link_to "Today's reflection", new_reflection_path,style: "color:white;" %></li>
+              <li><%= link_to "本日の反省", new_reflection_path,style: "color:white;" %></li>
               <li><%= link_to "My team", groups_path, style: "color:white;" %></li>
-              <li><%= link_to "Users", users_path, style: "color:white;" %></li>
+              <li><%= link_to "プレイヤー", users_path, style: "color:white;" %></li>
               <li><%= link_to "My page", reflections_path, style: "color:white;" %></li>
-              <li><%= link_to "Topics", topics_path, style: "color:white;" %></li>
-              <li><%= link_to "Favorite Topics", favorites_path, style: "color:white;" %></li>
+              <li><%= link_to "トピックス", topics_path, style: "color:white;" %></li>
+              <li><%= link_to "お気に入り", reflection_favorites_path(current_user.id), style: "color:white;" %></li>
               <li>><%= link_to "logout", destroy_user_session_path, method: :delete, style: "color:white;" %></li>
             <% else %>
               <li><%= link_to "Home", "/", style: "color:white;" %></li>

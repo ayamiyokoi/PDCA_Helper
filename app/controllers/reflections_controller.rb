@@ -69,6 +69,6 @@ class ReflectionsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def reflection_params
-      params.require(:reflection).permit(:goal, :result, :biggergoal, :plan, :topic, :overall)
+      params.require(:reflection).permit(:goal, :result, :biggergoal, :plan, :topic_name, :topic, :overall)
     end
 end
