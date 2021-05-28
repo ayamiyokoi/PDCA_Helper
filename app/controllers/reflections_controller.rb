@@ -5,6 +5,7 @@ class ReflectionsController < ApplicationController
   def index
     @reflections = Reflection.all
     @reflection = Reflection.find(current_user.id)
+    @user = User.find(current_user.id)
     #TODO current_user.idではだめ。
   end
 
