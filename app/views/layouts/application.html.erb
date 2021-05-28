@@ -14,16 +14,16 @@
       <ul>
             <% if user_signed_in? %>
               <li><%= link_to "本日の反省", new_reflection_path,style: "color:white;" %></li>
-              <li><%= link_to "My team", groups_path, style: "color:white;" %></li>
+              <li><%= link_to "所属チーム", groups_path, style: "color:white;" %></li>
               <li><%= link_to "プレイヤー", users_path, style: "color:white;" %></li>
-              <li><%= link_to "My page", reflections_path, style: "color:white;" %></li>
+              <li><%= link_to "マイページ", reflections_path, style: "color:white;" %></li>
               <li><%= link_to "トピックス", topics_path, style: "color:white;" %></li>
               <li><%= link_to "お気に入り", reflection_favorites_path(current_user.id), style: "color:white;" %></li>
-              <li>><%= link_to "logout", destroy_user_session_path, method: :delete, style: "color:white;" %></li>
+              <li>><%= link_to "ログアウト", destroy_user_session_path, method: :delete, style: "color:white;" %></li>
             <% else %>
-              <li><%= link_to "ho-mu ", "/", style: "color:white;" %></li>
-              <li><%= link_to "sign up", new_user_registration_path, style: "color:white;" %></li>
-              <li><%= link_to "login", new_user_session_path, style: "color:white;" %></li>
+              <li><%= link_to "ホーム", "/", style: "color:white;" %></li>
+              <li><%= link_to "新規登録", new_user_registration_path, style: "color:white;" %></li>
+              <li><%= link_to "ログイン", new_user_session_path, style: "color:white;" %></li>
             <% end %>
       </ul>
     </header>
