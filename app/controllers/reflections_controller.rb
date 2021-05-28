@@ -5,7 +5,8 @@ class ReflectionsController < ApplicationController
   def index
     @reflections = Reflection.all
     @reflection = Reflection.find(current_user.id)
-    #TODO current_user.idでは
+    @user = User.find(current_user.id)
+    #TODO current_user.idではだめ。
   end
 
   # GET /rflections/1 or /rflections/1.json
@@ -69,6 +70,6 @@ class ReflectionsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def reflection_params
-      params.require(:reflection).permit(:goal, :result, :biggergoal, :plan, :topic, :overall)
+      params.require(:reflection).permit(:goal, :result, :biggergoal, :plan, :topic_name, :topic, :overall)
     end
 end
