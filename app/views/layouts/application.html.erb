@@ -13,24 +13,41 @@
     <header id="header">
       <nav class="navbar navbar-expand-lg navbar-dark bg">
       <div class="container">
-        <span class="navbar-brand"><%= link_to "PDCA Helper", "/",style: "color:white;" %></span>
+        <span class="navbar-brand"><%= link_to "/",style: "color:white;" do %>
+        PDCA Helper  <i class="fas fa-pencil-alt"></i>
+         <% end %>
+        </span>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav ml-auto">
             <% if user_signed_in? %>
-              <li><%= link_to "本日の反省", new_reflection_path, style: "color:white;" %></li>
-              <li><%= link_to "所属チーム", groups_path, style: "color:white;" %></li>
-              <li><%= link_to "プレイヤー", users_path, style: "color:white;" %></li>
-              <li><%= link_to "マイページ", reflections_path, style: "color:white;" %></li>
-              <li><%= link_to "トピックス", topics_path, style: "color:white;" %></li>
-              <li><%= link_to "お気に入り", reflection_favorites_path(current_user.id), style: "color:white;" %></li>
-              <li>><%= link_to "ログアウト", destroy_user_session_path, method: :delete, style: "color:white;" %></li>
+              <li><%= link_to new_reflection_path, style: "color:white;" do %>
+                  <i class="fas fa-sticky-note"></i>本日の反省 <% end %></li>
+              <li><%= link_to groups_path, style: "color:white;" do %>
+                  <i class="fab fa-teamspeak"></i>所属チーム<% end %></li>
+              <li><%= link_to users_path, style: "color:white;" do %>
+                  <i class="fas fa-users"></i>プレイヤー<% end %></li>
+              <li><%= link_to reflections_path, style: "color:white;" do %>
+                  <i class="fas fa-user"></i>マイページ<% end %></li>
+              <li><%= link_to topics_path, style: "color:white;" do %>
+                  <i class="far fa-newspaper"></i>トピックス<% end %></li>
+              <li><%= link_to reflection_favorites_path(current_user.id), style: "color:white;" do %>
+                  <i class="fas fa-thumbs-up"></i>お気に入り<% end %></li>
+              <li>><%= link_to destroy_user_session_path, method: :delete, style: "color:white;" do%>
+                  <i class="fas fa-sign-out-alt"></i>ログアウト<% end %></li>
             <% else %>
-              <li><%= link_to "ホーム", "/", style: "color:white;" %></li>
-              <li><%= link_to "新規登録", new_user_registration_path, style: "color:white;" %></li>
-              <li><%= link_to "ログイン", new_user_session_path, style: "color:white;" %></li>
+              <li><%= link_to  "/", style: "color:white;" do %>
+                   <i class="fas fa-home"></i>ホーム
+                   <% end %>
+              </li>
+              <li><%= link_to new_user_registration_path, style: "color:white;" do %>
+                   <i class="fas fa-user-plus"></i>新規登録
+                   <% end %></li>
+              <li><%= link_to new_user_session_path, style: "color:white;" do %>
+                 <i class="fas fa-sign-in-alt"></i>ログイン
+              <% end %></li>
             <% end %>
       </ul>
       </div>
