@@ -1,11 +1,12 @@
-<p>
-  <strong>Topic</strong>
+<div>
+  <p>
+  <strong>トピック</strong>
   <%= @reflection.topic_name %>
    <%= @reflection.topic %>
 </p>
 
-<%= link_to 'Edit', edit_reflection_path(@reflection) %> |
-<%= link_to 'Back', reflections_path %>
+<%= link_to '編集', edit_reflection_path(@reflection), class: "btn btn-outline-success" %>
+<%= link_to '戻る', reflections_path, class: "btn btn-outline-secondary" %>
 
 <div>
 <% if @reflection.favorited_by?(current_user) %>
@@ -21,4 +22,5 @@
       <% end %>
     </p>
   <% end %>
+</div>
 </div>

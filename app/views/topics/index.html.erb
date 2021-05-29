@@ -15,9 +15,9 @@
     <% @reflections.each do |reflection| %>
       <tr>
         <td><%= reflection.topic_name %></td>
-        <td><%= link_to 'Show', topic_path(reflection.id) %></td>
-        <td><%= link_to 'Edit', edit_reflection_path(reflection) %></td>
-        <td><%= link_to 'Destroy', reflection, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '詳細画面', topic_path(reflection.id), class: "btn btn-outline-secondary" %></td>
+        <td><%= link_to '編集', edit_reflection_path(reflection), class: "btn btn-outline-success" %></td>
+        <td><%= link_to '削除', reflection, class: "btn btn-outline-danger", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
 
       <%= render 'favorite', reflection: reflection %>
