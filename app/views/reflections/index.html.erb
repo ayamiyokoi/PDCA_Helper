@@ -69,11 +69,12 @@
         <td><%= reflection.plan %></td>
         <td><%= reflection.topic %></td>
         <td><%= reflection.overall %><br><%= link_to "#{reflection.post_comments.count} コメント", reflection_path(reflection.id) %></td>
-        <td><%= link_to 'Show', reflection %></td>
-        <td><%= link_to 'Edit', edit_reflection_path(reflection) %></td>
-        <td><%= link_to 'Destroy', reflection, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '詳細画面', reflection %></td>
+      <!--  <td><%= link_to '編集', edit_reflection_path(reflection) %></td>-->
+      <!--  <td><%= link_to '削除', reflection, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
       </tr>
     <% end %>
+    <%= paginate @reflections %>
   </tbody>
 </table>
 <p><%= link_to '本日の反省', new_reflection_path, class: "btn btn-outline-secondary" %></p>

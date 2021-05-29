@@ -3,10 +3,11 @@ class ReflectionsController < ApplicationController
 
   # GET /rflections or /rflections.json
   def index
-    @reflections = Reflection.all
+    @reflections = Reflection.page(params[:page]).reverse_order
     @reflection = Reflection.find(current_user.id)
     @user = User.find(current_user.id)
     #TODO current_user.idではだめ。
+
   end
 
   # GET /rflections/1 or /rflections/1.json
