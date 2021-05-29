@@ -2,43 +2,65 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .top-box1{
-  height:300px;
-  background-color:#00fa9a;
+  height: 300px;
+  background-color: white;
+  text-align: center;
+  padding-top: 150px;
 }
 .top-box2{
-  height:300px;
-  background-color:#00ff7f;
+  height: 500px;
+  padding: 50px;
+  background-image: url(25441339-68FA-4431-A283-E757B0F8D528.jpg);
+  background-size: cover;
+  background-position: center;
 }
 .top-box3{
-  height:300px;
-  background-color:#90ee90;
+  height: 500px;
+  padding: 50px;
+  background-image: url(558C332A-94CC-4F87-80A7-7A03E2B33CFB.jpg);
+  background-size: cover;
+  background-position: center;
+
 }
 
 .top-box4{
-  height:300px;
-  background-color:#98fb98;
+  height: 500px;
+  padding: 50px;
 }
 
 .top-box5{
-  height:300px;
-  background-color:#7fffd4;
+  height: 500px;
+  padding: 50px;
+  background-image: url(913CC8F9-D384-463F-AD00-C7B39107D31A.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
 .top-box6{
-  height:300px;
-  background-color:#afeeee;
+  height: 300px;
+  background-color: white;
+  padding: 50px;
 }
 
 .col-md-4{
-  height:200px;
+  height: 200px;
   background-color:#e1eb34;
   padding-right: 15px;
   padding-left: 15px;
 }
 
 .col-md-6{
-  height:300px;
+  height: 300px;
   background-color:#c2ddf0;
   padding-right: 15px;
   padding-left: 15px;
+}
+
+#back {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+#back img {
+  width: 50px;
 }
