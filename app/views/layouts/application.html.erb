@@ -24,9 +24,9 @@
       <ul class="navbar-nav ml-auto">
             <% if user_signed_in? %>
               <li><%= link_to new_reflection_path, style: "color:white;" do %>
-                  <i class="fas fa-sticky-note"></i>本日の反省 <% end %></li>
+                  <i class="fas fa-edit"></i>本日の反省 <% end %></li>
               <li><%= link_to groups_path, style: "color:white;" do %>
-                  <i class="fab fa-teamspeak"></i>所属チーム<% end %></li>
+                  <i class="far fa-comments"></i>所属チーム<% end %></li>
               <li><%= link_to users_path, style: "color:white;" do %>
                   <i class="fas fa-users"></i>プレイヤー<% end %></li>
               <li><%= link_to reflections_path, style: "color:white;" do %>
