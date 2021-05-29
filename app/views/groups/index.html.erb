@@ -17,15 +17,18 @@
               メッセージはまだありません。
             </div>
           <% end %>
-          <%= link_to 'Edit', edit_group_path(group) %><br><%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%= link_to '編集', edit_group_path(group), class: "btn btn-outline-success" %>  <%= link_to '削除', group, class: "btn btn-outline-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
         </div>
       <% end %>
     </div>
 
   </div>
 <div class="row">
+  <div class="col-md-12">
   <div class="chat-group-form">
-  <h1>新規チャットグループ  <i class="far fa-comments"></i></h1>
+  <h3>新規チームを作成  <i class="far fa-comments"></i></h3>
   <%= render :partial => 'form', :locals => {group: @group} %>
   </div>
+  </div>
+</div>
 </div>
