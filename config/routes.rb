@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   resources :groups, only: [:new, :create, :edit, :update, :index]
   resources :topics, only: [:index, :show]
   resources :favorites, only: [:index]
+  resources :user, only: [:show]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
 end

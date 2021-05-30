@@ -1,4 +1,4 @@
-<div class="container">
+
   <div class="top-box1">
 
       <h1>PDCA Helper  <i class="fas fa-pencil-alt"></i></h1>
@@ -32,7 +32,6 @@
     PDCAサイクルを使って、効率的な成長をしよう！</p>
 </div>
 
-</div>
 
 <div class="top-box5">
   <h2 class="rgba-white">PDCA Helperでできること</h2>
@@ -45,8 +44,13 @@
 </div>
 
 <div class="top-box6">
-<p>Let's get started!!</p>
+<h3 class="blue">さあ、始めよう!!</h3>
+<h3 class="blue">こちらをクリック！！<%= link_to new_user_registration_path, class: "btn btn-outline-secondary" do %>
+    <i class="fas fa-user-plus"></i>新規登録<% end %>    <%= link_to new_user_session_path, class: "btn btn-outline-secondary" do %>
+                 <i class="fas fa-sign-in-alt"></i>ログイン
+              <% end %></h3>
 </div>
+
 
 <span id="back">
       <a href="#">

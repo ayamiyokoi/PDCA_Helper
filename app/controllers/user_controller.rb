@@ -5,5 +5,6 @@ class UserController < ApplicationController
 
     favorites = Favorite.where(user_id: current_user.id).pluck(:reflection_id)  
     @favorite_list = Reflection.find(favorites)
+    
   end
 end

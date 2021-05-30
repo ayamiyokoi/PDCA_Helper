@@ -38,15 +38,15 @@
 }
 
 .col-md-4{
-  height: 200px;
-  background-color:#e1eb34;
+  height: 215px;
+
   padding-right: 15px;
   padding-left: 15px;
 }
 
 .col-md-6{
-  height: 300px;
-  background-color:#c2ddf0;
+  height: 215px;
+
   padding-right: 15px;
   padding-left: 15px;
 }
@@ -64,4 +64,8 @@
 }
 #back img {
   width: 50px;
+}
+.box{
+  background-color:#c2ddf0;
+  height:200px;
 }
