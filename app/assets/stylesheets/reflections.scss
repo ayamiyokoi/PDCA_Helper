@@ -55,3 +55,13 @@
 .rgba-white{
   background-color: rgba(255, 255, 255, 0.5)
 }
+
+
+#back {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+#back img {
+  width: 50px;
+}

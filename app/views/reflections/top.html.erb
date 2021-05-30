@@ -50,10 +50,19 @@
 
 <span id="back">
       <a href="#">
-        <img src="img/arrow.png" alt="">
+        <%= image_tag "arrow.png" %>
       </a>
     </span>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/script.js"></script>
+
+    <script type="text/javascript">
+      $(function() {
+        $('#back a').on('click',function(event){
+        $('body, html').animate({
+          scrollTop:0
+        }, 800);
+        event.preventDefault();
+      });
+    });
+    </script>
 </div>
