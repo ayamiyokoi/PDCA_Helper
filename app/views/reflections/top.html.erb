@@ -6,7 +6,7 @@
 
   </div>
 
-<div class="top-box2">
+<div class="top-box2 inview_re fadeIn">
 
   <h2 class="rgba-white">PDCA Helperを作りたいと思った背景</h2>
   <div class="rgba-white">
@@ -18,7 +18,7 @@
   </div>
 </div>
 
-<div class="top-box3">
+<div class="top-box3 inview_re fadeIn">
   <h2 class="rgba-white">こんな悩みはありませんか  <i class="far fa-frown"></i></h2>
   <div class="rgba-white">
     <p>For player<br>毎月の営業ノルマに追われているが、結果に見えづらく、モチベーションが上がりづらい</p>
@@ -33,7 +33,7 @@
 </div>
 
 
-<div class="top-box5">
+<div class="top-box5 inview_re fadeIn">
   <h2 class="rgba-white">PDCA Helperでできること</h2>
   <div class="rgba-white">
     <p>①ライバルのトピックを、お気に入りしてまとめてみることが出来る</p>
@@ -44,8 +44,8 @@
 </div>
 
 <div class="top-box6">
-<h3 class="blue">さあ、始めよう!!</h3>
-<h3 class="blue">こちらをクリック！！<%= link_to new_user_registration_path, class: "btn btn-outline-secondary" do %>
+<h3 class="blue inview_re fadeIn">さあ、始めよう!!</h3>
+<h3 class="blue inview_re fadeIn">こちらをクリック！！<%= link_to new_user_registration_path, class: "btn btn-outline-secondary" do %>
     <i class="fas fa-user-plus"></i>新規登録<% end %>    <%= link_to new_user_session_path, class: "btn btn-outline-secondary" do %>
                  <i class="fas fa-sign-in-alt"></i>ログイン
               <% end %></h3>
@@ -58,15 +58,4 @@
       </a>
     </span>
 
-
-    <script type="text/javascript">
-      $(function() {
-        $('#back a').on('click',function(event){
-        $('body, html').animate({
-          scrollTop:0
-        }, 800);
-        event.preventDefault();
-      });
-    });
-    </script>
 </div>

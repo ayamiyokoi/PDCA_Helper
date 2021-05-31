@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-mid-12">
+    <div class="col-mid-4">
       <h2>プレイヤー<i class="fas fa-users"></i></h2>
       <table>
         <thead>
@@ -21,5 +21,44 @@
   </tboady>
 </table>
     </div>
-  </div>
+    <div class="col-md-8">
+      <div class="left-space">
+      <h2>本日の反省<i class="fas fa-edit"></i></h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>プレイヤー</th>
+      <th>本日の目標</th>
+      <th>本日の結果</th>
+      <th>定性目標</th>
+      <th>予定</th>
+      <th>本日のトピック</th>
+      <th>本日の総括</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reflections.each do |reflection| %>
+      <tr>
+        <td><%= attachment_image_tag reflection.user, :profile_image, size: "40x40", format: 'jpeg', fallback: "no_image.jpg" %><%= reflection.user.name %></td>
+        <td><%= reflection.goal %></td>
+        <td><%= reflection.result %></td>
+        <td><%= reflection.biggergoal %></td>
+        <td><%= reflection.plan %></td>
+        <td><%= reflection.topic %></td>
+        <td><%= reflection.overall %><br><%= link_to "#{reflection.post_comments.count} コメント", reflection_path(reflection.id) %></td>
+        <td><%= link_to '詳細画面', reflection %></td>
+      <!--  <td><%= link_to '編集', edit_reflection_path(reflection) %></td>-->
+      <!--  <td><%= link_to '削除', reflection, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+      </tr>
+    <% end %>
+    <%= paginate @reflections %>
+  </tbody>
+</table>
+    </div>
+
+      </div>
+    </div>
 </div>

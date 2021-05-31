@@ -1,37 +1,38 @@
 
 <p id="notice"><%= notice %></p>
-<p>
-  <strong>Goal:</strong>
+<div class="container">
+  <p>
+  <strong>今日の目標: </strong>
   <%= @reflection.goal %>
 </p>
 
 <p>
-  <strong>Result:</strong>
+  <strong>今日の成果: </strong>
   <%= @reflection.result %>
 </p>
 
 <p>
-  <strong>Biggergoal:</strong>
+  <strong>定性的目標（今月の目標・今クオーターの目標）: </strong>
   <%= @reflection.biggergoal %>
 </p>
 
 <p>
-  <strong>Plan:</strong>
+  <strong>予定: </strong>
   <%= @reflection.plan %>
 </p>
 
 <p>
-  <strong>Topic:</strong>
+  <strong>本日のトピック: </strong>
   <%= @reflection.topic %>
 </p>
 
 <p>
-  <strong>Overall:</strong>
+  <strong>本日の総括: </strong>
   <%= @reflection.overall %>
 </p>
 
-<%= link_to 'Edit', edit_reflection_path(@reflection) %> |
-<%= link_to 'Back', reflections_path %>
+<%= link_to '編集', edit_reflection_path(@reflection) %> |
+<%= link_to '戻る', users_path %>
 
 <div class="comments">
 <p>コメント件数：<%= @reflection.post_comments.count %></p>
@@ -67,4 +68,5 @@
       <% end %>
     </p>
   <% end %>
+</div>
 </div>

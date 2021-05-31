@@ -18,5 +18,23 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+    $(function() {
+        $('#back a').on('click',function(event){
+        $('body, html').animate({
+          scrollTop:0
+        }, 800);
+        event.preventDefault();
+      });
+    });
 
+    
 
+$(function(){
+  $(".inview_re").on("inview", function (event, isInView) {
+    if (isInView) {
+      $(this).stop().addClass("is-show");
+    } else {
+      $(this).stop().removeClass("is-show");
+    }
+  });
+});
