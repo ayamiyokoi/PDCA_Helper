@@ -10,6 +10,9 @@ class ReflectionsController < ApplicationController
 
   end
 
+  def about
+  end
+
   # GET /rflections/1 or /rflections/1.json
   def show
     @post_comment = PostComment.new
