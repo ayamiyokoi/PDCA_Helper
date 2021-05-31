@@ -1,0 +1,20 @@
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th>トピック</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <% if @favorite_list.present? %>
+  <% @favorite_list.each do |post| %>
+        <td><%= post.topic %></td>
+          
+  <% end %>
+<% end %>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  

@@ -33,7 +33,7 @@
                   <i class="fas fa-user"></i>マイページ<% end %></li>
               <li><%= link_to topics_path, style: "color:white;" do %>
                   <i class="far fa-newspaper"></i>トピックス<% end %></li>
-              <li><%= link_to reflection_favorites_path(current_user.id), style: "color:white;" do %>
+              <li><%= link_to favorites_path, style: "color:white;" do %>
                   <i class="fas fa-thumbs-up"></i>お気に入り<% end %></li>
               <li>><%= link_to destroy_user_session_path, method: :delete, style: "color:white;" do%>
                   <i class="fas fa-sign-out-alt"></i>ログアウト<% end %></li>

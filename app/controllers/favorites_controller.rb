@@ -17,7 +17,14 @@ class FavoritesController < ApplicationController
   end
 
   def show
-      @user = User.find(params[:id])
+      @user = User.find(current_user.id)
+      @reflections = @user.reflections
+      favorites = Favorite.where(user_id: current_user.id).pluck(:reflection_id)
+      @favorite_list = Reflection.find(favorites)
+  end
+
+  def index
+      @user = User.find(current_user.id)
       @reflections = @user.reflections
       favorites = Favorite.where(user_id: current_user.id).pluck(:reflection_id)
       @favorite_list = Reflection.find(favorites)
